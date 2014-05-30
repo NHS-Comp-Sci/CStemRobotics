@@ -14,11 +14,11 @@ CLinkbotI robot;
 robot.connect();
 double radius = 1.75;
 
-double speed = 200;
+double speed = 100;
 robot.setJointSpeeds(speed, NaN, speed);
 
 // Rough estimates, will tweak after testing
-int d1 = 6;
+int d1 = 8;
 int d2 = 12;
 int d3 = 12;
 int d4 = 12;
@@ -26,8 +26,8 @@ int d5 = 12;
 int d6 = 12;
 int d7 = 10;
 
-double track_width = 4.5;
-double angle = 90;
+double track_width = 4;
+double angle = 80;
 
 robot.moveDistance(d1, radius);
 robot.turnRight(angle, radius, track_width);
