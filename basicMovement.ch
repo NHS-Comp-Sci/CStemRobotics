@@ -30,32 +30,39 @@ robot.getJointSpeedRatios(joint1Ratio, NaN, joint3Ratio); // Get all the joint s
 robot.setJointSpeedRatio(ROBOT_JOINT1, joint1Ratio); // Set joint speed ratios of single joint (0 to 1)
 robot.setJointSpeedRatios(joint1Ratio, NaN, joint3Ratio); // Set all the joint speed ratios
 
+
 // 2 wheel robot - set speed (in/sec)
 double speed = 25; //inches per second
 robot.setTwoWheelRobotSpeed(speed, radius);
+
 
 // Moving joints by # of degrees (counter-clockwise) (relative position)
 int a1 = 360;
 int a2 = NaN; // I-bot can't move this joint
 int a3 = -360; // Would be NaN for an L bot
 robot.move(a1, a2, a3);
+
 robot.moveForward(a1); // does same thing
-// Move one joint by # of degrees
+// Move specific joint by # of degrees
 robot.moveJoint(ROBOT_JOINT1, a1);
+
 
 // To go backwards
 robot.move(-a1, a2, -a3);
 robot.moveBackward(a1);
 
+
 // Another way to move
 double dist = 10; // inches
 robot.moveDistance(dist, radius);
+
 
 // Turning
 double angle = 90;
 double trackwidth = 3.5;
 robot.turnLeft(angle, radius, trackwidth);
 robot.turnRight(angle, radius, trackwidth);
+
 
 // Move joints to a specific angle (absolute position)
 a1 = 123;
@@ -64,6 +71,7 @@ robot.moveTo(a1, a2, a3);
 // Move single joint
 robot.moveJointTo(ROBOT_JOINT1, a1);
 
+
 // Getting data
 double joint1Angle;
 double joint3Angle;
@@ -71,6 +79,7 @@ double joint3Angle;
 robot.getJointAngleAverage(ROBOT_JOINT1, joint1Angle);
 // Get all the angles!
 robot.getJointAnglesAverage(joint1Angle, NaN, joint3Angle);
+
 
 // Set movement state over specified time period
 // joint state enum values {ROBOT_NEUTRAL(default), ROBOT_FORWARD, ROBOT_BACKWARD, ROBOT_HOLD}
@@ -82,8 +91,10 @@ robot.setMovementStateTime(state1, state2, state3, time);
 // To set for only 1 joint
 robot.setJointMovementStateTime(ROBOT_JOINT1, state1, time);
 
+
 // Set joint exit state: can be ROBOT_NEUTRAL(default) or ROBOT_HOLD
 robot.setExitState(state1);
+
 
 // get execution time
 double t1, t2, elapsed_time;
