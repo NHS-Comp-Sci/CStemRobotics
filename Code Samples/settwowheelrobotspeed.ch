@@ -2,9 +2,9 @@
    Set the speed of a two-wheel robot. */
 #include <linkbot.h>
 CLinkbotI robot;
-double radius=1.75; // the radius of the two wheels of the robot in inches
-double speed=3;   // the speed in 2.5 inches per second for a two-wheel robot
-double distance=5;  // the distance in 3 inches to move forward
+double radius = 1.75; // the radius of the two wheels of the robot in inches
+double speed = 3;     // the speed in 2.5 inches per second for a two-wheel robot
+double distance = 5;  // the distance in 3 inches to move forward
 
 /* connect to the paired robot and move to the zero position */
 robot.connect();

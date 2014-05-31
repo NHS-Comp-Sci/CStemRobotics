@@ -1,4 +1,0 @@
-#include <linkbot.h>
-CLinkbotI robot;
-robot.connect();
-double radius = 1.75;
