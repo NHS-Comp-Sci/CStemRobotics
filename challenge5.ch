@@ -1,4 +1,7 @@
 // Robot - cube - robot
+// Rear on top, curve forwards
+// 3 - 1 - box - 3 - 1
+
 #include <linkbot.h>
 void moveForward(double dist);
 void turn(double angle);
@@ -17,18 +20,12 @@ int sp = 240;
 l.setJointSpeeds(sp, NaN, sp);
 r.setJointSpeeds(sp, NaN, sp);
 
-turn(80);
-moveForward(30);
-moveForward(-30);
-turn(-90);
-moveForward(15);
-turn(80);
-moveForward(30);
-moveForward(-30);
-turn(-90);
-moveForward(15);
-turn(80);
-moveForward(30);
+// Movement stuff
+moveForward(-45);
+moveForward(10);
+turn(-120);
+moveForward(-20);
+
 
 void moveForward(double dist)
 {
